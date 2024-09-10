@@ -1,8 +1,8 @@
 import React from 'react'
-
+import style from'./page.module.css'
 const Settings = () => {
   return (
-    <div>Settings</div>
+    <div className={style.container}>Settings</div>
   )
 }
 

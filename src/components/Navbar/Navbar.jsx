@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React from 'react'
+import style from './page.module.css'
 
 const Navbar = () => {
     const links = [
@@ -31,7 +31,7 @@ const Navbar = () => {
     ]
   return (
     <div>
-        <div>
+        <div className={style.container}>
             {links.map(link =>(
                 <Link key = {link.id} href={link.path}>{link.name}</Link>
             ))}

@@ -1,8 +1,8 @@
 import React from 'react'
-
+import style from'./page.module.css'
 const Category = () => {
   return (
-    <div>Category</div>
+    <div className={style.container}>Category</div>
   )
 }
 

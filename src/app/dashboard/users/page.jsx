@@ -1,8 +1,8 @@
 import React from 'react'
-
+import style from'./page.module.css'
 const Users = () => {
   return (
-    <div>Users</div>
+    <div className={style.container}>Users</div>
   )
 }
 
