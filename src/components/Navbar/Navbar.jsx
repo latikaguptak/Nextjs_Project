@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import style from './page.module.css'
 
@@ -30,11 +31,17 @@ const Navbar = () => {
         }
     ]
   return (
-    <div>
-        <div className={style.container}>
+    <div className={style.container}>
+        <Link href='/' className={style.logo}>
+            Amal
+        </Link>
+        <div className={style.links}>
             {links.map(link =>(
-                <Link key = {link.id} href={link.path}>{link.name}</Link>
+                <Link className={style.link} key = {link.id} href={link.path}>{link.name} </Link>
             ))}
+        <button className={style.logout} onClick={()=>{console.log("logout")}}>
+            Logout
+        </button>
         </div>
     </div>
   )
