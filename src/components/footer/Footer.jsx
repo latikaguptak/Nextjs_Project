@@ -1,6 +1,5 @@
-// 'use client'
-import React from 'react'
-import style from './page.module.css'
+
+import style from './footer.module.css'
 import Image from 'next/image'
 
 const Footer = () => {
