@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css"; // Fix: use 'styles' instead of 'style'
 import Girls from "../assets/images/Girls.png";
+import Button from "@/components/button/Button";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <div className={styles.item}>
         <h1 className={styles.title}>Show-off Your Choice</h1>
         <p className={styles.desc} >Innovative, Scalable web projects that combine strategic thinking, cutting-edge code, and striking designs</p>
-        <button className={styles.button}>See my work</button>
+        <Button url='/portfolio' text='See my work'/>
       </div>
       <div className={styles.item}>
 
