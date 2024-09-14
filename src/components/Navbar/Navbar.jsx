@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import style from './page.module.css'
+import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
 
 const Navbar = () => {
     const links = [
@@ -10,7 +11,7 @@ const Navbar = () => {
             path: '/'
         },
         {
-            id:4,
+            id:2,
             name: 'Portfolio',
             path: '/portfolio'
         },
@@ -20,12 +21,17 @@ const Navbar = () => {
             path: '/dashboard'
         },
         {
-            id:2,
+            id:4,
+            name: 'Blog',
+            path: '/blog'
+        },
+        {
+            id:5,
             name: 'About',
             path: '/about'
         },
         {
-            id:5,
+            id:6,
             name: 'Contact',
             path: '/contact'
         }
@@ -36,6 +42,7 @@ const Navbar = () => {
             Amal
         </Link>
         <div className={style.links}>
+            <DarkModeToggle/>
             {links.map(link =>(
                 <Link className={style.link} key = {link.id} href={link.path}>{link.name} </Link>
             ))}
