@@ -5,6 +5,9 @@
     font-size: 60px;
     margin-bottom: 100px;
     text-align: center;
+    background: linear-gradient(to bottom, #0d9ace, hsl(0, 68%, 88%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .content{
     display: flex;

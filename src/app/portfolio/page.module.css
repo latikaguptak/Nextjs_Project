@@ -1,6 +1,6 @@
 .mainTitle{
     font-size: 100px;
-
+    
 }
 
 .container{
@@ -9,6 +9,9 @@
 
 .sTitle{
     margin: 20px 0px;
+    background: linear-gradient(to bottom, #0d9ace, hsl(0, 68%, 88%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .items{
     display: flex;
@@ -38,6 +41,7 @@
     bottom: 10px;
     font-size: 40px;
     font-weight: bold;
+    
 }
 .item:hover .title{
     color:#09bee7

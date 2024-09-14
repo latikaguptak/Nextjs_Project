@@ -1,0 +1,26 @@
+.container {
+    width: 40px;
+    height: 20px;
+    border: 1.5px solid #039ad6;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    /* background-color: #fff; Add background color for better contrast */
+  }
+  
+  .icon {
+    font-size: 10px;
+    /* z-index: 1; Ensure the icons are on top of the ball */
+  }
+  
+  .ball {
+    width: 15px;
+    height: 15px;
+    background-color: #039ad6;
+    border-radius: 50%;
+    position: absolute;
+  }

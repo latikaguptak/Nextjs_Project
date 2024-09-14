@@ -18,6 +18,9 @@
     color: aliceblue;
     padding: 5px;
     border-radius: 0px;
+    background: linear-gradient(to bottom, #0980b4, #320303);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 .textContainer{
