@@ -1,3 +1,80 @@
-.container{
-    background-color: inherit;
-}
+.container {
+    background-color: #f9f9f9; /* Light background for better readability */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Add padding for breathing space */
+    border-radius: 8px; /* Soft corner rounding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .top {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  }
+  
+  .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+  }
+  
+  .title {
+    font-size: 50px;
+    background: linear-gradient(to bottom, #0d9ace, #654343);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 20px; /* Add space between title and description */
+  }
+  
+  .author {
+    display: flex;
+    align-items: center; /* Align avatar and name properly */
+    gap: 10px;
+    margin-top: 15px; /* Space between description and author */
+  }
+  .avatar {
+    border: none;
+    border-radius: 50px;
+  }
+  .userName{
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+
+  }
+  
+  .desc {
+    font-size: 16px; /* Slightly larger text for better readability */
+    line-height: 1.6; /* Increase line height for better text flow */
+    color: #555; /* Softer text color for better contrast */
+  }
+  
+  .imgcontainer {
+    flex: 1;
+    height: 300px;
+    position: relative;
+    border-radius: 8px; /* Rounded corners for the image */
+    overflow: hidden; /* Prevents image overflow */
+  }
+  
+  .img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bottom {
+    margin-top: 40px; /* Space between sections */
+  }
+  
+  .text {
+    font-size: 16px;
+    line-height: 1.8; /* Comfortable line spacing for long text */
+    color: #333; /* Standard readable text color */
+    text-align: justify; /* Justify text for cleaner alignment */
+  }
+  
