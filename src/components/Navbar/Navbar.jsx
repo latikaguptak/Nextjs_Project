@@ -1,4 +1,5 @@
 'use client'
+import react from 'react'
 import Link from 'next/link'
 import style from './page.module.css'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'

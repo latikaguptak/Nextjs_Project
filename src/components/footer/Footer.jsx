@@ -1,6 +1,7 @@
 
 import style from './footer.module.css'
 import Image from 'next/image'
+import react from 'react'
 
 const Footer = () => {
 
