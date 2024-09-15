@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from'./page.module.css'
 import Image from 'next/image'
 import Button from '@/components/button/button'
@@ -6,7 +5,7 @@ import Button from '@/components/button/button'
 const Contact = () => {
   return (
     <div className = {styles.container}>
-      <h1 className={styles.title}>Let's Keep in touch</h1>
+      <h1 className={styles.title}>Lets Keep in touch</h1>
       <div className={styles.content}>
         <div className={styles.imgContainer}>
           <Image
