@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <div className={style.container}>
         <Link href='/' className={style.logo}>
-            Amal
+            Next-Connect
         </Link>
         <div className={style.links}>
             <DarkModeToggle/>
