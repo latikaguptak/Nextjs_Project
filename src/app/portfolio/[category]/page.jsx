@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./page.module.css";
-import Button from "@/components/Button/Button";
+import Button from "@/components/button/button";
 import Image from "next/image";
 const Category = ({ params }) => {
   console.log(params.category); // { category: 'web-development' }
