@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css"; // Fix: use 'styles' instead of 'style'
 import Girls from "../assets/images/Girls.png";
-import Button from "@/components/button/button";
+import Button from "../../components/button/button";
 
 export default function Home() {
   return (
