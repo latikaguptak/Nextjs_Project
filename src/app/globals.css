@@ -8,9 +8,21 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: #111;
-  color: #bbb;
+  
 }
+.light{
+  background-color: #ffffff;
+  color: #111;
+}
+.theam{
+  transition: 1s all ease;
+}
+.dark{
+  background-color: #111;
+  color: #ffffff;
+
+}
+
 a{
   text-decoration: none;
   color: inherit;

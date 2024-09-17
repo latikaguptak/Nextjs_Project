@@ -4,7 +4,7 @@
 }
 
 .container{
-    background-color: inherit;
+    transition-duration: 1s all ease;
 }
 
 .sTitle{

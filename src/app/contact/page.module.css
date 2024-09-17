@@ -1,5 +1,5 @@
 .container{
-    background-color: #111;
+    display: block;
 }
 .title{
     font-size: 60px;
