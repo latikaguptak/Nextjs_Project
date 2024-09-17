@@ -1,18 +1,34 @@
+
 import React from 'react'
 import styles from'./page.module.css'
 import Image from 'next/image'
-const BlogPost = () => {
+import { notFound } from 'next/navigation';
+
+
+async function getdata(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  
+  // console.log("data",res.json());
+
+  if(!res.ok){
+    return notFound
+  }
+
+  return res.json();
+  
+}
+
+
+const BlogPost = async({params}) => {
+  const data = await getdata(params.id);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h1 className={styles.title}>Lorem select</h1>
+          <h1 className={styles.title}>{data.title}</h1>
           <p className={styles.desc}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonummy
-            mi, tincidunt ut tempus ut, tincidunt at lectus. Maecenas ipsum
-            metus, imperdiet non ullamcorper vitae, consectetur et neque. Sed
-            vel lectus auctor, placerat tortor ac, congue nisi. Aliquam erat
-            volutpat. Quisque eget arcu orci. Nulla facilisi.
+            {data.body}
           </p>
           <div className={styles.author}>
             <Image
@@ -38,21 +54,7 @@ const BlogPost = () => {
 
       <div className={styles.bottom}>
         <p className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nonummy
-          mi, tincidunt ut tempus ut, tincidunt at lectus. Maecenas ipsum metus,
-          imperdiet non ullamcorper vitae, consectetur et neque. Sed vel lectus
-          auctor, placerat tortor ac, congue nisi. Aliquam erat volutpat.
-          Quisque eget arcu orci. Nulla facilisi. Proin viverra, enim et
-          ullamcorper tincidunt, arcu turpis bibendum velit, a pellentesque eros
-          risus at velit. Donec egestas, dolor vel convallis consectetur, dui
-          arcu lacinia est, ut molestie neque nisl id lectus. Donec vel diam in
-          arcu sagittis interdum. Sed et ipsum metus. Nulla facilisi. Donec
-          vitae neque in justo cursus semper. Sed vel velit ac mauris congue
-          scelerisque. Donec at neque vel neque semper semper. Sed et ipsum
-          metus. Nulla facilisi. Donec vitae neque in justo cursus semper semper
-          sem sagittis just sollicitudin lore m nibh. Donec at neque vel neque
-          semper sem sagittis just sollicitudin lore m nibh. Donec at neque vel
-          neque semper sem sagittis just.
+          {data.title}
         </p>
       </div>
     </div>
