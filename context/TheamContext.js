@@ -1,13 +1,19 @@
-import { createContext } from "react";
-import { useState } from "react/cjs/react.production.min";
+'use client'
+import { useState, createContext  } from "react";
 
-const TheamContext= createContext();
+export const TheamContext= createContext();
 
-const TheamProvider =() =>{
+export const TheamProvider =({children}) =>{
     const [mode,setMode] = useState("dark");
 
-    const toggleMode = () => {
+    const toggle = () => {
         setMode(mode === "dark"? "light" : "dark");
     }
+    return(<TheamContext.Provider value={{toggle, mode}}>
+        <div className={`theam ${mode}`}>
+            {children}
+        </div>
+    </TheamContext.Provider>
+    )
 
 }
