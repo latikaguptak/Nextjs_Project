@@ -7,18 +7,22 @@
 .logo{
     font-weight: bold;
     font-size: 22px;
+    transition: 1s all ease;
 
 }
 .links{
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 20px;
 }
 .link:hover{
     /* color:#0d9ace; */
-    text-decoration: underline 2px solid #cbefff
+    text-decoration: underline 2px solid #cbefff;
 
 }
+
+
+
 .logout{
     padding: 5px;
     border: none;
