@@ -9,11 +9,11 @@ const Portfolio = () => {
         <Link href='/portfolio/illustration' className={styles.item}>
           <spam className={styles.title}>Illustrations</spam>
         </Link>
-        <Link href='/portfolio/website' className={styles.item}>
-          <spam className={styles.title}>Website</spam>
+        <Link href='/portfolio/websites' className={styles.item}>
+          <spam className={styles.title}>Websites</spam>
         </Link>
-        <Link href='/portfolio/applictaions' className={styles.item}>
-          <spam className={styles.title}>Applictaions</spam>
+        <Link href='/portfolio/applications' className={styles.item}>
+          <spam className={styles.title}>Applications</spam>
         </Link>
       </div>
 
