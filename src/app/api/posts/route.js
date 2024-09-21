@@ -30,3 +30,18 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Error creating post' }, { status: 500 });
   }
 }
+export async function GET() {
+  try {
+    // Connect to MongoDB
+    await connectMongo();
+
+    // Find all posts in the database
+    const posts = await Post.find({});
+
+    // Return the posts as JSON
+    return NextResponse.json(posts, { status: 200 });
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return NextResponse.json({ error: 'Error fetching posts' }, { status: 500 });
+  }
+}
