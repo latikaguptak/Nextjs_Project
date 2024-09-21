@@ -1,0 +1,104 @@
+/* Container to center the form */
+.loader {
+    font-size: 1.2rem;
+    color: #7d4cdb;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+
+.container {
+    font-family: 'Poppins', sans-serif;
+   
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Styling for the title */
+  .title {
+    font-size: 2.5rem;
+    color: #3a3a3a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Styling for the form */
+  .form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Input fields and text area styling */
+  .input,
+  .textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fdfdfd;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: #7d4cdb;
+  }
+  
+  .textarea {
+    min-height: 100px;
+    resize: none;
+  }
+  
+  /* Button styling */
+  .button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #7d4cdb;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(125, 76, 219, 0.3);
+  }
+  
+  .button:hover {
+    background-color: #6a3dc3;
+    transform: translateY(-3px);
+  }
+  
+  .button:active {
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .form {
+      padding: 1.5rem;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .button {
+      font-size: 1rem;
+    }
+  }
+  
