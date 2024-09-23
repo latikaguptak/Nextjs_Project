@@ -1,0 +1,40 @@
+.Container{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    background-color: #eaf3f8;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    color: #444;
+    box-shadow: 0 4px 8px rgba(12, 169, 242, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+.Container:hover{
+    background-color: #f5f8fa;
+    border-color: #039ad6;
+    color: #039ad6;
+}
+.image{
+    object-fit: cover;
+    border: none;
+    border-radius: 70px;
+    align-items: center;
+
+}
+
+.content{
+
+}
+
+.title{
+    margin-bottom: 10px;
+
+}
+.desc{
+    font-size: 18px;
+    color: #bbb;
+
+}
+

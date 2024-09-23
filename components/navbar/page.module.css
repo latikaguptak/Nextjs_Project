@@ -1,0 +1,33 @@
+.container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-weight: bold;
+    font-size: 22px;
+    transition: 1s all ease;
+
+}
+.links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.link:hover{
+    /* color:#0d9ace; */
+    text-decoration: underline 2px solid #cbefff;
+
+}
+
+
+
+.logout{
+    padding: 5px;
+    border: none;
+    background-color: #0d9ace ;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
