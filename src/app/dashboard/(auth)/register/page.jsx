@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { useState } from 'react';
 import styles from './page.module.css';
@@ -130,3 +131,14 @@ const Register = () => {
 };
 
 export default Register;
+=======
+import React from 'react'
+import style from'./page.module.css'
+const Register = () => {
+  return (
+    <div className={style.container}>Register</div>
+  )
+}
+
+export default Register
+>>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1

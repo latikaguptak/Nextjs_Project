@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 'use client'
 // import React from 'react'
 // import style from'./page.module.css'
@@ -22,3 +23,14 @@ export default function SignIn() {
     click to go on google
   </button>
 }
+=======
+import React from 'react'
+import style from'./page.module.css'
+const Login = () => {
+  return (
+    <div> className={style.container}Login</div>
+  )
+}
+
+export default Login
+>>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1

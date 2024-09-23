@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* page.module.css */
 
 .container {
@@ -70,3 +71,8 @@
     /* Ensure it does not exceed the width */
   }
   
+=======
+.container{
+    background-color: inherit;
+}
+>>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1

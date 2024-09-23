@@ -28,19 +28,34 @@ const Navbar = () => {
         },
         {
             id:5,
+<<<<<<< HEAD
             name: 'Posts',
             path: '/newpost'
         },
         {
             id:6,
+=======
+>>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1
             name: 'About',
             path: '/about'
         },
         {
+<<<<<<< HEAD
             id:7,
             name: 'Contact',
             path: '/contact'
         },
+=======
+            id:6,
+            name: 'Contact',
+            path: '/contact'
+        },
+        {
+            id:7,
+            name: 'Posts',
+            path: '/posts'
+        }
+>>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1
     ]
   return (
     <div className={style.container}>
