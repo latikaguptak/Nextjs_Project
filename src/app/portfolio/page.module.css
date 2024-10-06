@@ -1,48 +1,179 @@
-.mainTitle{
-    font-size: 100px;
-    
+
+
+/* General Styles */
+.mainTitle {
+    font-size: 4vw; /* Dynamic font size */
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
 }
 
-.container{
-    transition-duration: 1s all ease;
+.container {
+    padding: 20px;
+    max-width: 1400px; /* Wider container for large screens */
+    margin: 0 auto; /* Center the container */
+    transition: 1s all ease;
 }
 
-.sTitle{
-    margin: 20px 0px;
+.sTitle {
+    margin: 20px 0;
     background: linear-gradient(to bottom, #0d9ace, hsl(0, 68%, 88%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.items{
-    display: flex;
-    gap: 50px;
-}
-.item{
-    border: 5px solid #bbb;
-    border-radius: 5px;
-    width: 300px;
-    height: 400px;
-    position: relative;
-    background-size: cover !important;
-}
-.item:nth-child(1){
-    background: url("/illustration.png");
-}
-.item:nth-child(2){
-    background: url("/Web.png");
-}
-.item:nth-child(3){
-    background: url("/apps.png");
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5vw; /* Responsive subtitle */
+    text-align: center;
 }
 
-.title{
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Distribute space evenly between items */
+    gap: 40px; /* Larger gap between items for clear visibility */
+    margin-top: 40px;
+}
+
+.item {
+    border: 3px solid #bbb;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px; /* Increase size for better visibility on all screens */
+    height: 450px; /* Taller height to accommodate image and text */
+    position: relative;
+    background-color: #fff;
+    background-size: cover; /* Image covers entire div */
+    background-repeat: no-repeat;
+    background-position: center; /* Ensure image is centered */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for modern feel */
+}
+
+.item:nth-child(1) {
+    background-image: url("/illustration.png"); /* Ensure image path is correct */
+}
+
+.item:nth-child(2) {
+    background-image: url("/Web.png");
+}
+
+.item:nth-child(3) {
+    background-image: url("/apps.png");
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Hover effect */
+}
+
+.title {
     position: absolute;
     right: 10px;
     bottom: 10px;
-    font-size: 40px;
+    font-size: 1.8rem; /* Larger font for visibility */
     font-weight: bold;
-    
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    padding: 10px 15px;
+    border-radius: 8px;
 }
-.item:hover .title{
-    color:#09bee7
+
+.item:hover .title {
+    background-color: rgba(9, 190, 231, 0.8); /* Hover effect on text */
+}
+
+/* Small Devices (up to 480px) */
+@media (max-width: 480px) {
+    .mainTitle {
+        font-size: 8vw;
+    }
+
+    .sTitle {
+        font-size: 6vw;
+    }
+
+    .items {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .item {
+        width: 100%; /* Full width */
+        height: 250px; /* Smaller height for mobile */
+    }
+
+    .title {
+        font-size: 5vw;
+    }
+}
+
+/* Medium Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .mainTitle {
+        font-size: 6vw;
+    }
+
+    .sTitle {
+        font-size: 4vw;
+    }
+
+    .items {
+        gap: 30px;
+    }
+
+    .item {
+        width: 48%; /* Two columns on tablet */
+        height: 350px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mainTitle {
+        font-size: 4vw;
+    }
+
+    .sTitle {
+        font-size: 3vw;
+    }
+
+    .items {
+        gap: 35px;
+    }
+
+    .item {
+        width: 30%; /* Three columns for larger screens */
+        height: 400px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+    }
+}
+
+/* Extra Large Devices (1025px and above) */
+@media (min-width: 1025px) {
+    .mainTitle {
+        font-size: 3vw;
+    }
+
+    .sTitle {
+        font-size: 2.5vw;
+    }
+
+    .items {
+        gap: 40px;
+    }
+
+    .item {
+        width: 28%; /* Four columns for wide screens */
+        height: 450px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
 }

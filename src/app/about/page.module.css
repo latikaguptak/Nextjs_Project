@@ -1,19 +1,24 @@
-.container{
-    
+.container {
+    padding: 0 20px;
 }
-.imageContainer{
+
+.imageContainer {
     width: 100%;
     height: 400px;
     position: relative;
 }
-.img{
+
+.img {
     object-fit: cover;
     filter: opacity(80%);
+    width: 100%;
+    height: 100%;
 }
-.imgText{
+
+.imgText {
     position: absolute;
     bottom: 20px;
-    left:10px;
+    left: 10px;
     background-color: #0d9ace;
     color: aliceblue;
     padding: 5px;
@@ -21,22 +26,109 @@
     background: linear-gradient(to bottom, #0980b4, #320303);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
-.textContainer{
+
+.textContainer {
     display: flex;
     gap: 100px;
 }
-.item{
+
+.item {
     flex: 1;
     margin-top: 50px;
     flex-direction: column;
     display: flex;
     gap: 30px;
 }
-.desc{
+
+.desc {
     font-size: 18px;
     font-weight: 300;
     text-align: justify;
-    
+}
+
+/* Large screens (1440px and up) */
+@media (min-width: 1440px) {
+    .imageContainer {
+        height: 500px; /* Larger image height */
+    }
+
+    .imgText {
+        font-size: 36px; /* Larger text for bigger screens */
+    }
+
+    .textContainer {
+        gap: 150px; /* Increase gap for larger screens */
+    }
+
+    .desc {
+        font-size: 20px; /* Increase font size for better readability */
+    }
+}
+
+/* Medium screens (992px to 1440px) */
+@media (max-width: 1440px) and (min-width: 992px) {
+    .imageContainer {
+        height: 400px; /* Medium size for image */
+    }
+
+    .imgText {
+        font-size: 28px; /* Adjust font size for medium screens */
+    }
+
+    .textContainer {
+        gap: 80px; /* Reduce gap for medium screens */
+    }
+
+    .desc {
+        font-size: 18px; /* Normal text size */
+    }
+}
+
+/* Small screens (768px to 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    .imageContainer {
+        height: 300px; /* Smaller image size for tablets */
+    }
+
+    .imgText {
+        font-size: 24px; /* Smaller text for tablets */
+    }
+
+    .textContainer {
+        flex-direction: column; /* Stack items vertically */
+        gap: 50px; /* Adjust gap for tablets */
+    }
+
+    .desc {
+        font-size: 16px; /* Smaller text size for tablets */
+    }
+}
+
+/* Very small screens (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+
+    .imageContainer {
+        height: 250px; /* Smaller image height */
+    }
+
+    .imgText {
+        font-size: 18px; /* Smaller text size */
+    }
+
+    .textContainer {
+        flex-direction: column; /* Stack items vertically */
+        gap: 30px;
+    }
+
+    .item {
+        margin-top: 20px; /* Reduce margin on smaller screens */
+    }
+
+    .desc {
+        font-size: 14px; /* Smaller text size for mobile */
+    }
 }

@@ -1,17 +1,67 @@
-.container{
+.container {
     font-size: 12px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow wrapping if the content exceeds the screen width */
 }
 
-.social{
+.social {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.icon{
+
+.icon {
     opacity: 0.6;
     cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.icon:hover {
+    opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) { /* Tablets and medium screens */
+    .container {
+        font-size: 11px;
+        height: 45px;
+        padding: 0 15px;
+    }
+
+    .social {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 768px) { /* Smaller tablets and large phones */
+    .container {
+        font-size: 10px;
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    .social {
+        gap: 6px;
+    }
+}
+
+@media (max-width: 576px) { /* Mobile screens */
+    .container {
+        justify-content: space-between; /* Keep elements aligned on the same line */
+        padding: 10px;
+        font-size: 10px;
+        height: auto;
+    }
+
+    .social {
+        gap: 5px;
+    }
+
+    .icon {
+        opacity: 0.8;
+    }
 }

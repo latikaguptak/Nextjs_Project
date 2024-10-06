@@ -9,7 +9,10 @@ export default function Home() {
       <div className={styles.item}>
         <h1 className={styles.title}>Show-off Your Choice</h1>
         <p className={styles.desc} >Innovative, Scalable web projects that combine strategic thinking, cutting-edge code, and striking designs</p>
-        <Button url='/portfolio' text='See my work'/>
+        <div className={styles.button}>
+
+        <Button url='/portfolio' text='See my work' />
+        </div>
       </div>
       <div className={styles.item}>
 

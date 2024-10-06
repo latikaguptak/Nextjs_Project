@@ -3,7 +3,6 @@
     align-items: center;
     gap: 50px;
     margin-bottom: 50px;
-<<<<<<< HEAD
     background-color: #eaf3f8;
     border: none;
     border-radius: 50px;
@@ -22,11 +21,6 @@
     border: none;
     border-radius: 70px;
     align-items: center;
-=======
-}
-.image{
-    object-fit: cover;
->>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1
 
 }
 

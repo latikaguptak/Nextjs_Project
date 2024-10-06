@@ -1,33 +1,127 @@
-.container{
+/* Main Container */
+.container {
     height: 100px;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
     align-items: center;
-}
-.logo{
+    padding: 0 20px;
+    background-color: transparent;
+    z-index: 1000;
+  }
+  
+  /* Logo on the left */
+  .logo {
     font-weight: bold;
     font-size: 22px;
-    transition: 1s all ease;
-
-}
-.links{
+    transition: 0.3s all ease;
+  }
+  
+  /* Links for Desktop */
+  .links {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-.link:hover{
-    /* color:#0d9ace; */
-    text-decoration: underline 2px solid #cbefff;
-
-}
-
-
-
-.logout{
-    padding: 5px;
-    border: none;
-    background-color: #0d9ace ;
-    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Mobile links sliding in/out */
+  @media (max-width: 576px) {
+    .links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(68, 68, 68, 0.9);
+      width: 250px;
+      height: 100vh;
+      padding: 20px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .open {
+      display: flex;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Hamburger Menu: Show on Mobile */
+  .hamburger {
+    display: none;
     cursor: pointer;
-    border-radius: 3px;
-}
+    flex-direction: column;
+    align-items: center;
+    width: 30px;
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #444;
+    margin: 4px 0;
+    transition: 0.3s ease;
+  }
+  
+  .barOpen {
+    background-color: #ec2646;
+  }
+  
+  /* Transition effect for hamburger bars */
+  .bar:nth-child(1) {
+    transform-origin: top left;
+  }
+  
+  .bar:nth-child(2) {
+    opacity: 1;
+  }
+  
+  .bar:nth-child(3) {
+    transform-origin: bottom left;
+  }
+  
+  .hamburger:hover .bar {
+    background-color: #888;
+  }
+  
+  /* Open menu animation */
+  .hamburger .barOpen:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  
+  .hamburger .barOpen:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger .barOpen:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  @media (max-width: 576px) {
+    .hamburger {
+      display: flex;
+    }
+  }
+  
+  /* Adjustments for various screen sizes */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 15px;
+    }
+    .logo {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .container {
+      justify-content: space-between;
+      height: auto;
+      padding: 15px;
+    }
+    .logo {
+      font-size: 20px;
+    }
+  }

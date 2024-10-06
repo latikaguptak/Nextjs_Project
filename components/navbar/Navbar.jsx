@@ -1,78 +1,66 @@
-'use client'
-import react from 'react'
-import Link from 'next/link'
-import style from './page.module.css'
-import DarkModeToggle from '../DarkModeToggle/DarkModeToggle'
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import style from "./page.module.css";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
-    const links = [
-        {
-            id:1,
-            name: 'Home',
-            path: '/'
-        },
-        {
-            id:2,
-            name: 'Portfolio',
-            path: '/portfolio'
-        },
-        {
-            id:3,
-            name: 'Dashboard',
-            path: '/dashboard'
-        },
-        {
-            id:4,
-            name: 'Blog',
-            path: '/blog'
-        },
-        {
-            id:5,
-<<<<<<< HEAD
-            name: 'Posts',
-            path: '/newpost'
-        },
-        {
-            id:6,
-=======
->>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1
-            name: 'About',
-            path: '/about'
-        },
-        {
-<<<<<<< HEAD
-            id:7,
-            name: 'Contact',
-            path: '/contact'
-        },
-=======
-            id:6,
-            name: 'Contact',
-            path: '/contact'
-        },
-        {
-            id:7,
-            name: 'Posts',
-            path: '/posts'
-        }
->>>>>>> 816b114cda7a6f25b33d1810b6160b1931c91ae1
-    ]
-  return (
-    <div className={style.container}>
-        <Link href='/' className={style.logo}>
-            Next-Connect
-        </Link>
-        <div className={style.links}>
-            <DarkModeToggle/>
-            {links.map(link =>(
-                <Link className={style.link} key = {link.id} href={link.path} >{link.name} </Link>
-            ))}
-        <button className={style.logout} onClick={()=>{console.log("logout")}}>
-            Logout
-        </button>
-        </div>
-    </div>
-  )
-}
+  const [isOpen, setIsOpen] = useState(false);
+  const session = useSession();
 
-export default Navbar
+  const links = [
+    { id: 1, name: "Home", path: "/" },
+    { id: 2, name: "Portfolio", path: "/portfolio" },
+    { id: 3, name: "MyBlogs", path: "/blog" },
+    { id: 5, name: "About", path: "/about" },
+    { id: 6, name: "Contact", path: "/contact" },
+  ];
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false); // Close the menu when a link is clicked
+  };
+
+  return (
+    <>
+      <div className={style.container}>
+        <Link href="/" className={style.logo}>
+          Next-Connect
+        </Link>
+
+        <DarkModeToggle />
+
+        <div className={`${style.links} ${isOpen ? style.open : ""}`}>
+          {links.map((link) => (
+            <Link
+              className={style.link}
+              key={link.id}
+              href={link.path}
+              onClick={closeMenu} // Close menu on link click
+            >
+              {link.name}
+            </Link>
+          ))}
+          {/* Authentication handling */}
+          {session.status === "authenticated" && (
+            <button className={style.logout} onClick={signOut}>
+              Logout
+            </button>
+          )}
+        </div>
+
+        <div className={style.hamburger} onClick={toggleMenu}>
+          <div className={`${style.bar} ${isOpen ? style.barOpen : ""}`}></div>
+          <div className={`${style.bar} ${isOpen ? style.barOpen : ""}`}></div>
+          <div className={`${style.bar} ${isOpen ? style.barOpen : ""}`}></div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Navbar;

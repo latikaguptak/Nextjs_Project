@@ -1,31 +1,130 @@
-.container{
-  gap: 100px;
+.container {
+  gap: 10px; /* Increased gap between items */
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.item{
+.item {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 10px; 
 }
-.title{
-  font-size: 72px;
+
+.title {
+  font-size: 78px;
   background: linear-gradient(to bottom, #0d9ace, hsl(0, 68%, 88%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.img{
-  width: 100%;
-  height: 500px;
-  animation: move 3s infinite ease alternate ;
+
+.img {
+  object-fit: contain;
+  animation: move 3s infinite ease alternate;
 }
-@keyframes move{
-    from{
-        transform: translateY(-10px);
-    }
-    to{
-        transform: translateY(10px);
-    }
+
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1400px) {
+  .container {
+    gap: 10px;
+  }
+  .title {
+    font-size: 64px; /* Increased title size for larger screens */
+  }
+  .img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    gap: 10px;
+  }
+  .title {
+    font-size: 60px; /* Increased title size */
+  }
+  .img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .title {
+    font-size: 50px; /* Larger size for tablets */
+    text-align: center;
+  }
+  .img {
+    height: 450px;
+    object-fit: contain;
+  }
+  .button {
+    margin: 20px auto; /* Auto margin on the sides to center it */
+    width: fit-content; /* Adjusts the button width based on content */
+    padding: 10px 20px; /* Add padding for a better button appearance */
+    text-align: center; /* Center text inside the button */
+    display: flex; /* Make it a flex container to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #0d9ace; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color change */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    gap: 50px;
+  }
+  .title {
+    font-size: 42px; /* Increased for medium devices */
+    text-align: center;
+  }
+  .img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    gap: 30px;
+  }
+  .title {
+    font-size: 36px; /* Larger title for smaller devices */
+    text-align: center;
+  }
+  .img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    gap: 20px;
+  }
+  .title {
+    font-size: 30px; /* Larger title for extra small screens */
+    text-align: center;
+  }
+  .img {
+    height: 300px;
+  }
 }
