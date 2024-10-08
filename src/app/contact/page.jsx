@@ -7,14 +7,14 @@ const Contact = () => {
     <div className = {styles.container}>
       <h1 className={styles.title}>Lets Keep in touch</h1>
       <div className={styles.content}>
-        <div className={styles.imgContainer}>
+        {/* <div className={styles.imgContainer}>
           <Image
           src="/Contact.gif"
           alt="Contact"
           fill={true}
           
           className={styles.image} />
-        </div>
+        </div> */}
         <form className={styles.form}>
           <input type="text" name="name" placeholder="Name"  className={styles.input}/>
           <input type="email" name="email" placeholder="Email"  className={styles.input}/>

@@ -6,15 +6,15 @@ const Portfolio = () => {
     <div className={styles.container}>
       <h1 className={styles.sTitle}>Choose from gallery</h1>
       <div className={styles.items}>
-        <Link href='/portfolio/illustration' className={styles.item}>
-          <spam className={styles.title}>Illustrations</spam>
+        <Link href='https://myportfolio-gamma-eight.vercel.app/' className={styles.item}>
+          <spam className={styles.title}>My Portfolio</spam>
         </Link>
         <Link href='/portfolio/websites' className={styles.item}>
-          <spam className={styles.title}>Websites</spam>
+          <spam className={styles.title}>My work</spam>
         </Link>
-        <Link href='/portfolio/applications' className={styles.item}>
+        {/* <Link href='/portfolio/applications' className={styles.item}>
           <spam className={styles.title}>Applications</spam>
-        </Link>
+        </Link> */}
       </div>
 
     </div>

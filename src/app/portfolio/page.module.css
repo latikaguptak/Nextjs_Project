@@ -2,21 +2,20 @@
 
 /* General Styles */
 .mainTitle {
-    font-size: 4vw; /* Dynamic font size */
+    font-size: 64px; /* Dynamic font size */
     text-align: center;
-    margin: 20px 0;
-    color: #333;
+    margin: 0px ;
+    color: #555;
 }
 
 .container {
-    padding: 20px;
-    max-width: 1400px; /* Wider container for large screens */
+    padding: 10px;
     margin: 0 auto; /* Center the container */
     transition: 1s all ease;
 }
 
 .sTitle {
-    margin: 20px 0;
+    margin: 10px;
     background: linear-gradient(to bottom, #0d9ace, hsl(0, 68%, 88%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,7 +36,7 @@
     border-radius: 15px;
     overflow: hidden;
     width: 100%;
-    max-width: 350px; /* Increase size for better visibility on all screens */
+    max-width: 450px; /* Increase size for better visibility on all screens */
     height: 450px; /* Taller height to accommodate image and text */
     position: relative;
     background-color: #fff;
@@ -84,7 +83,7 @@
 /* Small Devices (up to 480px) */
 @media (max-width: 480px) {
     .mainTitle {
-        font-size: 8vw;
+        font-size: 48px;
     }
 
     .sTitle {
@@ -109,7 +108,7 @@
 /* Medium Devices (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     .mainTitle {
-        font-size: 6vw;
+        font-size: 38px;
     }
 
     .sTitle {
@@ -121,7 +120,7 @@
     }
 
     .item {
-        width: 48%; /* Two columns on tablet */
+        width: 350px; /* Two columns on tablet */
         height: 350px;
     }
 
@@ -133,7 +132,7 @@
 /* Large Devices (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .mainTitle {
-        font-size: 4vw;
+        font-size: 28px;
     }
 
     .sTitle {
@@ -145,7 +144,7 @@
     }
 
     .item {
-        width: 30%; /* Three columns for larger screens */
+        width: 400px; /* Three columns for larger screens */
         height: 400px;
     }
 
@@ -157,7 +156,7 @@
 /* Extra Large Devices (1025px and above) */
 @media (min-width: 1025px) {
     .mainTitle {
-        font-size: 3vw;
+        font-size: 64px;
     }
 
     .sTitle {
@@ -169,8 +168,8 @@
     }
 
     .item {
-        width: 28%; /* Four columns for wide screens */
-        height: 450px;
+        width: 350px; /* Four columns for wide screens */
+        height: 350px;
     }
 
     .title {

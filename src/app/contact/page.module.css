@@ -1,52 +1,140 @@
-.container{
+/* Main container */
+.container {
     display: block;
-}
-.title{
-    font-size: 60px;
-    margin-bottom: 100px;
+    padding: 20px;
+    max-width: 1400px; /* Increased max width for large screens */
+    margin: 0 auto;
+  }
+  
+  /* Title adjustments for responsiveness */
+  .title {
+    font-size: 3.5rem; /* Larger font size for large screens */
+    margin-bottom: 60px; /* Slightly increased margin for large screens */
     text-align: center;
     background: linear-gradient(to bottom, #0d9ace, hsl(0, 68%, 88%));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.content{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Flex layout for content with responsive gap and alignment */
+  .content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
-    gap: 100px;
-
-}
-.imgContainer{
+    gap: 50px; /* Reduced gap for better mobile layout */
+    padding: 0 20px; /* Added padding for large screens */
+  }
+  
+  /* Responsive image container */
+  .imgContainer {
     flex: 1;
     position: relative;
-    height: 500px;
-
-}
-.image{
+    height: 350px; /* Adjusted height for better responsiveness */
+  }
+  
+  /* Image with improved fit and scaling */
+  .image {
     object-fit: contain;
-    animation: move 3s infinite ease alternate ;
-}
-@keyframes move{
-    from{
-        transform: translateY(-15px);
+    animation: move 3s infinite ease alternate;
+    width: 100%; /* Full width for responsive behavior */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Keyframes for animation */
+  @keyframes move {
+    from {
+      transform: translateY(-15px);
     }
-    to{
-        transform: translateY(0px) scale(1.03);
+    to {
+      transform: translateY(0px) scale(1.03);
     }
-}
-.form{
-    flex:1;
+  }
+  
+  /* Form layout with better spacing */
+  .form {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-.input, .textArea{
-    padding: 20px;
-    background-color: transparent ;
+    width: 100%; /* Full width on smaller screens */
+  }
+  
+  /* Input and text area responsiveness */
+  .input,
+  .textArea {
+    padding: 15px;
+    background-color: transparent;
     border: none;
     outline: none;
     color: #bbb;
     border: 2px solid #bbb;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-}
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 700px; /* Increased max width for large screens */
+    margin: 0 auto; /* Center elements on larger screens */
+  }
+  
+  /* Media queries for different screen sizes */
+  
+  /* Large screens (desktops) */
+  @media (min-width: 1440px) {
+    .content {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 120px; /* Larger gap for better spacing on large screens */
+    }
+  
+    .imgContainer {
+      height: 600px; /* Larger image height for large screens */
+    }
+  
+    .title {
+      font-size: 4rem; /* Increased font size for large screens */
+      margin-bottom: 80px; /* Increased margin for better spacing */
+    }
+  
+    .input,
+    .textArea {
+      font-size: 1.2rem; /* Slightly larger font size for better readability */
+      padding: 20px; /* Increased padding for large inputs */
+    }
+  }
+  
+  /* Medium screens (tablets) */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .content {
+      flex-direction: column;
+      gap: 40px; /* Slightly smaller gap for tablets */
+    }
+  
+    .imgContainer {
+      height: 400px; /* Medium height for tablets */
+    }
+  
+    .title {
+      font-size: 2.5rem; /* Slightly smaller font size */
+    }
+  }
+  
+  /* Small screens (mobile) */
+  @media (max-width: 767px) {
+    .title {
+      font-size: 2rem; /* Smaller font for mobile */
+      margin-bottom: 30px; /* Reduced margin */
+    }
+  
+    .content {
+      gap: 30px; /* Smaller gap for mobile */
+    }
+  
+    .imgContainer {
+      height: 250px; /* Smaller height for mobile */
+    }
+  
+    .input,
+    .textArea {
+      padding: 10px;
+      font-size: 14px; /* Smaller font size for inputs */
+    }
+  }
