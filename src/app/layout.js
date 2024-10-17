@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import { TheamProvider } from "../../context/TheamContext";
-import AuthProvider from "../../components/AuthProvider/AuthProvider";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <TheamProvider>
-          <AuthProvider>
+          
 
 
 
@@ -30,7 +29,7 @@ export default function RootLayout({ children }) {
         
         </div>
 
-          </AuthProvider>
+          
         </TheamProvider>
         </body>
     </html>

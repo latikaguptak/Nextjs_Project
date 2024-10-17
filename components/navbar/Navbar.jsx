@@ -3,11 +3,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import style from "./page.module.css";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
-import { signOut, useSession } from "next-auth/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const session = useSession();
+ 
   const linksRef = useRef(null); // Create a ref for the links menu
 
   const links = [
@@ -67,12 +66,7 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          {/* Authentication handling */}
-          {session.status === "authenticated" && (
-            <button className={style.logout} onClick={signOut}>
-              Logout
-            </button>
-          )}
+          
         </div>
 
         <div className={style.hamburger} onClick={toggleMenu}>
