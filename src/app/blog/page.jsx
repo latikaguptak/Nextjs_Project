@@ -56,7 +56,7 @@ import Button from '../../../components/button/button';
 
 async function getdata() {
   try {
-    const res = await fetch('http://localhost:3000/api/posts', { cache: 'no-cache' });
+    const res = await fetch('https://nextjs-project-blond-eight.vercel.app/api/posts', { cache: 'no-cache' });
     
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
